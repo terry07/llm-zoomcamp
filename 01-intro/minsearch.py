@@ -93,4 +93,6 @@ class Index:
         # Filter out zero-score results
         top_docs = [self.docs[i] for i in top_indices if scores[i] > 0]
 
+        scores_all = [scores[i] for i in top_indices if scores[i] > 0]
+        print(scores_all)
         return top_docs
